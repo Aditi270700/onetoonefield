@@ -18,9 +18,13 @@ class Departmant(models.Model):
    dep_name = models.CharField(max_length=50)
    dep_des = models.TextField()
    dep_hod = models.CharField(max_length=50)
+   def __str__(self):
+      return self.dep_name
 
 class Student(models.Model):
    student_name = models.CharField(max_length=50)
    student_email = models.EmailField()
    student_dep = models.CharField(max_length=50)
    student_roll = models.IntegerField()
+   def __str__(self):
+      return self.student_name
